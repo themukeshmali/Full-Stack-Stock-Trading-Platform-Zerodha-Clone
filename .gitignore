@@ -1,0 +1,21 @@
+# Environment Variables - NEVER push these
+backend/.env
+
+# Dependencies - not needed on GitHub
+backend/node_modules/
+frontend/node_modules/
+dashboard/node_modules/
+
+# Build outputs (optional - remove if you want to keep builds)
+frontend/build/
+dashboard/build/
+
+# Logs
+backend/error.log
+backend/out.txt
+frontend/out.txt
+frontend/build_out.txt
+dashboard/out.txt
+dashboard/build_out.txt
+dashboard/start_out.txt
+frontend/test_output.txt

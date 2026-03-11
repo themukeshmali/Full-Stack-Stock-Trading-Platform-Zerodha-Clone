@@ -38,3 +38,60 @@ code {
   border-radius: 10px;
   border: none;
 }
+
+/* ===== MOBILE RESPONSIVE - FRONTEND ===== */
+@media (max-width: 992px) {
+  .nav-link {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    margin-left: 0;
+  }
+
+  #supportWrapper {
+    flex-direction: column;
+    margin: 0 20px;
+    gap: 20px;
+  }
+
+  #supportHero input {
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+
+  /* General container padding fix */
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Hero sections - make images responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Stack flex rows vertically */
+  .row.d-flex {
+    flex-direction: column;
+  }
+
+  /* Fix text sizes for mobile */
+  h1 { font-size: 1.8rem !important; }
+  h2 { font-size: 1.5rem !important; }
+  h3 { font-size: 1.2rem !important; }
+}
+
+@media (max-width: 480px) {
+  #supportWrapper {
+    margin: 0 12px;
+  }
+
+  #supportHero input {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}

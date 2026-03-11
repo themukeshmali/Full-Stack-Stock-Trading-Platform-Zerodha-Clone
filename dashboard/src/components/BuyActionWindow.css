@@ -251,3 +251,37 @@
   background: #f1f1f1;
   color: #333;
 }
+
+/* ===== MOBILE RESPONSIVE - BuyActionWindow ===== */
+@media (max-width: 768px) {
+  .container {
+    width: 95vw !important;
+    left: 2.5vw !important;
+    height: auto !important;
+    max-height: 90vh;
+    overflow-y: auto;
+    bottom: 0 !important;
+  }
+
+  .inputs {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .inputs fieldset {
+    max-width: 100%;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .order-validity {
+    width: 100%;
+  }
+
+  .buttons {
+    top: 0;
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}

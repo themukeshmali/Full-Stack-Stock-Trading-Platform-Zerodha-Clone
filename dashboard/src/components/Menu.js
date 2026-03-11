@@ -6,6 +6,10 @@ const Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState(0);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
 
+  // Read logged-in user from localStorage (set by frontend on login)
+  const loggedInUser = localStorage.getItem("loggedInUser") || "User";
+  const avatarLetters = loggedInUser.slice(0, 2).toUpperCase();
+
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
   };
@@ -91,8 +95,8 @@ const Menu = () => {
         </ul>
         <hr />
         <div className="profile" onClick={handleProfileClick}>
-          <div className="avatar">ZU</div>
-          <p className="username">USERID</p>
+          <div className="avatar">{avatarLetters}</div>
+          <p className="username">{loggedInUser}</p>
         </div>
       </div>
     </div>

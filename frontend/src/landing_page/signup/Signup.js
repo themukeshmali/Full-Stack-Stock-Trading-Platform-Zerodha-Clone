@@ -26,6 +26,9 @@ function Signup() {
                 setIsLogin(true);
                 setPassword(""); // Just clear password requiring them to log in
             } else {
+                // Save logged-in user to localStorage so dashboard can display it
+                localStorage.setItem("loggedInUser", username);
+                localStorage.setItem("loggedInEmail", response.data.user?.email || "");
                 setUsername("");
                 setEmail("");
                 setPassword("");

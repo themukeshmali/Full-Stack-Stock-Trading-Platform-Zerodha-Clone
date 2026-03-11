@@ -861,6 +861,14 @@ hr {
     border-bottom: 1px solid rgb(224, 224, 224);
     padding: 8px 16px;
     justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .nifty, .sensex {
+    flex-basis: 45%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 4px;
   }
 
   /* --- Menu / Nav --- */
@@ -870,10 +878,12 @@ hr {
     padding: 8px 16px;
     flex-wrap: wrap;
     gap: 4px;
+    overflow-x: auto;
   }
 
   .menus {
     flex-wrap: wrap;
+    width: 100%;
   }
 
   .menus ul {
@@ -891,7 +901,7 @@ hr {
 
   /* --- Main dashboard layout --- */
   .dashboard-container {
-    flex-direction: column;
+    flex-direction: column-reverse; /* content first, watchlist below */
     height: auto;
     min-height: 100vh;
   }
@@ -904,7 +914,7 @@ hr {
     overflow-x: hidden;
   }
 
-  /* Watchlist takes full width and reduced height */
+  /* Watchlist takes full width and reduced height, sits below content */
   .watchlist-container {
     flex-basis: 100%;
     width: 100%;
@@ -982,16 +992,21 @@ hr {
 @media (max-width: 480px) {
 
   .indices-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     gap: 6px;
     padding: 8px 12px;
   }
 
   .nifty, .sensex {
-    flex-basis: 100%;
+    flex-basis: 48%;
     justify-content: flex-start;
-    gap: 8px;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  .index, .index-points, .percent {
+    font-size: 0.7rem;
   }
 
   .menu-container {
